@@ -39,13 +39,13 @@ Foi utilizada a **PokéAPI** para obter os dados dos Pokémon, como nome, imagem
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/bella-souza/pokedex
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd NOME_DA_PASTA
+cd pokedex
 ```
 
 Instale as dependências:
@@ -63,6 +63,7 @@ npm run dev
 ## 🔗 Aplicação publicada
 
 **Link:** 
+https://pokedex-sand-three.vercel.app/
 
 ## 🤖 Uso de Inteligência Artificial
 
