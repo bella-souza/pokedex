@@ -1,0 +1,725 @@
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+main > section {
+  margin-bottom: 45px;
+}
+
+main h2 {
+  margin: 0 0 16px;
+
+  font-size: 30px;
+  color: #202938;
+}
+
+main p {
+  color: #374151;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PESQUISA
+========================================= */
+
+#pokemons form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+#pokemons label {
+  font-weight: 700;
+  color: #202938;
+}
+
+#pokemons input {
+  width: 300px;
+
+  padding: 14px 18px;
+
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #202938;
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+#pokemons input:focus {
+  border-color: #9fd8ff;
+  background: #ffffff;
+}
+
+#pokemons form > button {
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #ec4899
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#pokemons form > button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px
+    rgba(239, 68, 68, 0.25);
+}
+
+
+/* =========================================
+   LISTA DE POKÉMON
+========================================= */
+
+.lista-pokemons {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    5,
+    minmax(0, 1fr)
+  );
+
+  gap: 22px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card-pokemon {
+  min-width: 0;
+
+  padding: 22px 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+
+  box-shadow: 0 7px 18px
+    rgba(32, 41, 56, 0.1);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-pokemon:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 25px
+    rgba(32, 41, 56, 0.16);
+}
+
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.card-pokemon img {
+  width: 140px;
+  height: 140px;
+
+  object-fit: contain;
+
+  margin: 5px auto 12px;
+
+  image-rendering: pixelated;
+
+  filter: drop-shadow(
+    0 7px 5px rgba(0, 0, 0, 0.12)
+  );
+
+  transition: transform 0.25s ease;
+}
+
+.card-pokemon:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   TEXTO DO CARD
+========================================= */
+
+.card-pokemon h3 {
+  margin: 5px 0 8px;
+
+  font-size: 21px;
+
+  color: #202938;
+
+  text-transform: capitalize;
+}
+
+.card-pokemon p {
+  margin: 4px 0;
+
+  font-size: 15px;
+
+  color: #4b5563;
+}
+
+
+/* =========================================
+   BOTÕES DOS CARDS
+========================================= */
+
+.card-pokemon button {
+  width: 100%;
+
+  padding: 11px 10px;
+
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card-pokemon button:first-of-type {
+  margin-top: 16px;
+
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #ec4899
+  );
+}
+
+.card-pokemon button:last-of-type {
+  background: linear-gradient(
+    90deg,
+    #4f8df7,
+    #56c596
+  );
+}
+
+.card-pokemon button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   CORES DOS TIPOS
+========================================= */
+
+.card-pokemon.grass {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #a8edc2
+  );
+
+  border-color: #78c98b;
+}
+
+.card-pokemon.fire {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #ffb3a7
+  );
+
+  border-color: #ef5350;
+}
+
+.card-pokemon.water {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #9fd8ff
+  );
+
+  border-color: #5ba9e6;
+}
+
+.card-pokemon.electric {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #fff3a6
+  );
+
+  border-color: #e6c934;
+}
+
+.card-pokemon.psychic,
+.card-pokemon.fairy {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f5a9d0
+  );
+
+  border-color: #e879b5;
+}
+
+.card-pokemon.poison {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #d8b4fe
+  );
+
+  border-color: #a855f7;
+}
+
+.card-pokemon.bug {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #d9ef9f
+  );
+
+  border-color: #9db83e;
+}
+
+.card-pokemon.normal {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #e5e7eb
+  );
+
+  border-color: #a8a29e;
+}
+
+
+/* =========================================
+   FAVORITOS
+========================================= */
+
+#favoritos {
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+
+  box-shadow: 0 7px 20px
+    rgba(32, 41, 56, 0.08);
+}
+
+
+/* =========================================
+   COMPARAÇÃO
+========================================= */
+
+#comparar {
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+
+  box-shadow: 0 7px 20px
+    rgba(32, 41, 56, 0.08);
+}
+
+.lista-comparacao {
+  display: grid;
+
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 350px)
+  );
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   CARD DE COMPARAÇÃO
+========================================= */
+
+.card-comparacao {
+  padding: 25px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+
+  box-shadow: 0 7px 18px
+    rgba(32, 41, 56, 0.1);
+}
+
+.card-comparacao img {
+  width: 140px;
+  height: 140px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  image-rendering: pixelated;
+}
+
+.card-comparacao h3 {
+  margin: 10px 0;
+
+  font-size: 22px;
+
+  text-transform: capitalize;
+}
+
+.card-comparacao p {
+  margin: 6px 0;
+}
+
+
+/* =========================================
+   CORES DA COMPARAÇÃO
+========================================= */
+
+.card-comparacao.grass {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #a8edc2
+  );
+}
+
+.card-comparacao.fire {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #ffb3a7
+  );
+}
+
+.card-comparacao.water {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #9fd8ff
+  );
+}
+
+.card-comparacao.electric {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #fff3a6
+  );
+}
+
+.card-comparacao.psychic,
+.card-comparacao.fairy {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f5a9d0
+  );
+}
+
+
+/* =========================================
+   LIMPAR COMPARAÇÃO
+========================================= */
+
+.limpar-comparacao {
+  display: block;
+
+  margin: 25px auto 0;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #ec4899
+  );
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TABLET GRANDE
+   5 cards -> 3 cards
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .lista-pokemons {
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  }
+}
+
+
+/* =========================================
+   TABLET
+   3 cards -> 2 cards
+========================================= */
+
+@media (max-width: 900px) {
+
+  main {
+    width: 80%;
+    padding: 35px 25px;
+  }
+
+  .lista-pokemons {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+
+    justify-content: center;
+
+    gap: 120px;
+  }
+
+  .card-pokemon {
+    width: 100%;
+    min-width: 0;
+
+    padding: 22px 18px;
+  }
+
+  .card-pokemon img {
+    width: 125px;
+    height: 125px;
+  }
+
+  #pokemons form {
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+  main {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  main > section {
+    margin-bottom: 35px;
+  }
+
+  main h2,
+  main p {
+    text-align: center;
+  }
+
+  main h2 {
+    font-size: 23px;
+  }
+
+
+  /* PESQUISA */
+
+  #pokemons form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    gap: 10px;
+
+    margin-top: 20px;
+  }
+
+  #pokemons label {
+    text-align: center;
+  }
+
+  #pokemons input,
+  #pokemons form > button {
+    width: 90%;
+    max-width: 320px;
+  }
+
+
+  /* LISTA */
+
+  .lista-pokemons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 18px;
+  }
+
+
+  /* CARD */
+
+  .card-pokemon {
+    width: 88%;
+    max-width: 250px;
+
+    margin: 0 auto;
+
+    padding: 22px 18px;
+  }
+
+  .card-pokemon img {
+    width: 125px;
+    height: 225px;
+  }
+
+
+  /* FAVORITOS */
+
+  #favoritos {
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px 16px;
+
+    text-align: center;
+  }
+
+
+  /* COMPARAÇÃO */
+
+  #comparar {
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px 16px;
+
+    text-align: center;
+  }
+
+  .lista-comparacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+  }
+
+  .card-comparacao {
+    width: 90%;
+    max-width: 250px;
+
+    margin: 0 auto;
+  }
+
+  .limpar-comparacao {
+    width: 90%;
+    max-width: 300px;
+
+    margin: 25px auto 0;
+  }
+}
+
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 100px) {
+
+  main {
+    padding: 28px 12px;
+  }
+
+  main h2 {
+    font-size: 21px;
+  }
+
+  main p {
+    font-size: 14px;
+  }
+
+  .card-pokemon {
+    padding: 20px 15px;
+  }
+}
+

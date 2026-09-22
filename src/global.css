@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap");
+
+
+
+body {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    120deg,
+    #d8f3dc 0%,
+    #b7e4c7 20%,
+    #ffd6a5 42%,
+    #ffadad 58%,
+    #bde0fe 78%,
+    #a2d2ff 100%
+  );
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: #202938;
+
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: "Nunito", sans-serif;
+
+  color: #202938;
+
+  overflow-x: hidden;
+  
+}
